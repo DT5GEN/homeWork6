@@ -34,20 +34,20 @@ public class MainClass extends Object {
         System.out.println("Work time string: " + deltaTime * 0.000001f + " millisec");
 
 //
-    }}
-//        starTime = System.nanoTime();
-//
-//        StringBuilder example1 = new StringBuilder("Example");
-//
-//        for (int i = 0; i < 50000; i++) {
-//            example1.append(i);
-//        }
-//
-//        deltaTime = System.nanoTime() - starTime;
-//        System.out.println(example1.toString());
-//        System.out.println("Work time StringBuilder: " + deltaTime * 0.000001f + " millisec");
-//        System.out.println(example.equals(example1.toString()));
 
+        starTime = System.nanoTime();
+
+        StringBuilder example1 = new StringBuilder("Example");
+
+        for (int i = 0; i < 50000; i++) {
+            example1.append(i);
+        }
+
+        deltaTime = System.nanoTime() - starTime;
+        System.out.println(example1.toString());
+        System.out.println("Work time StringBuilder: " + deltaTime * 0.000001f + " millisec");
+        System.out.println(example.equals(example1.toString()));
+    }}
 //        String s0 = "Hello";
 //        s0 += "_world";
 //
