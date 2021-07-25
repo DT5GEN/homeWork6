@@ -1,4 +1,5 @@
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -21,34 +22,34 @@ public class MainClass extends Object {
 //        System.out.println(s0.equals(s1));
 //        System.out.println(s0.equals(s2));
 //        System.out.println(s0.equals(s3));
-
-        long starTime = System.nanoTime();
-        String example = "Example"; //String example = new String("Example");
-
-        for (int i = 0; i < 50000; i++) {
-            example += i;
-        }
-
-        float deltaTime = System.nanoTime() - starTime;
-        System.out.println(example);
-        System.out.println("Work time string: " + deltaTime * 0.000001f + " millisec");
-
 //
-
-        starTime = System.nanoTime();
-
-        StringBuilder example1 = new StringBuilder("Example");
-
-        for (int i = 0; i < 50000; i++) {
-            example1.append(i);
-        }
-
-        deltaTime = System.nanoTime() - starTime;
-        System.out.println(example1.toString());
-        System.out.println("Work time StringBuilder: " + deltaTime * 0.000001f + " millisec");
-        System.out.println(example.equals(example1.toString()));
-    }}
-//        String s0 = "Hello";
+//        long starTime = System.nanoTime();
+//        String example = "Example"; //String example = new String("Example");
+//
+//        for (int i = 0; i < 50000; i++) {
+//            example += i;
+//        }
+//
+//        float deltaTime = System.nanoTime() - starTime;
+//        System.out.println(example);
+//        System.out.println("Work time string: " + deltaTime * 0.000001f + " millisec");
+//
+////
+//
+//        starTime = System.nanoTime();
+//
+//        StringBuilder example1 = new StringBuilder("Example");
+//
+//        for (int i = 0; i < 50000; i++) {
+//            example1.append(i);
+//        }
+//
+//        deltaTime = System.nanoTime() - starTime;
+//        System.out.println(example1.toString());
+//        System.out.println("Work time StringBuilder: " + deltaTime * 0.000001f + " millisec");
+//        System.out.println(example.equals(example1.toString()));
+//    }}
+////        String s0 = "Hello";
 //        s0 += "_world";
 //
 //        StringBuilder s = new StringBuilder("Hello");
@@ -74,30 +75,30 @@ public class MainClass extends Object {
 //
 //        FileInputStream fis; //read
 //        FileOutputStream fos; //write
-//
-//        try {
-//            FileOutputStream fos = new FileOutputStream("text.txt", true);
-////            PrintStream ps = new PrintStream(fos);
-//            byte[] str = "Hello world!!1222221!".getBytes();
-////            ps.println("Hello!!!! WOrld!! JAva");
-////            ps.close();
-//            fos.write(str);
-//            fos.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
-//        try {
-//            FileInputStream fis = new FileInputStream("text.txt");
-//            int outbox;
-//            while ((outbox = fis.read()) != -1) {
-//                System.out.print((char) outbox);
-//            }
-//            fis.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
+        try {
+            FileOutputStream fos = new FileOutputStream("text.txt", true);
+//            PrintStream ps = new PrintStream(fos);
+            byte[] str = " \n  \n Hello world!!1222221!".getBytes();
+//            ps.println("Hello!!!! WOrld!! JAva");
+//            ps.close();
+            fos.write(str);
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            FileInputStream fis = new FileInputStream("text.txt");
+            int outbox;
+            while ((outbox = fis.read()) != -1) {
+                System.out.print((char) outbox);
+            }
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 //        Scanner scanner = new Scanner(System.in);
 //
 //    }
@@ -114,6 +115,7 @@ public class MainClass extends Object {
 //            System.out.println("Method from static class");
 //        }
 
+    }}
 
 //}
 /*
